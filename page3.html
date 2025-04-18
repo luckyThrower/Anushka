@@ -1,0 +1,47 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Pick a Date</title>
+  <style>
+    body {
+      font-family: 'Comic Sans MS', cursive, sans-serif;
+      background-color: #ffe6fa;
+      text-align: center;
+      padding-top: 100px;
+    }
+    h1 { color: #d63384; }
+    input, button {
+      padding: 10px;
+      font-size: 1rem;
+      border-radius: 10px;
+      border: none;
+      margin: 10px;
+    }
+    button {
+      background-color: #ff69b4;
+      color: white;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+  <h1>Select a date for our hangout!</h1>
+  <input type="date" id="date" />
+  <br/>
+  <button onclick="submitDate()">Done</button>
+
+  <script>
+    function submitDate() {
+      const date = document.getElementById('date').value;
+      if (date) {
+        alert('Yay! Can’t wait for our date on ' + date);
+      } else {
+        alert('Pick a date, silly!');
+      }
+    }
+  </script>
+</body>
+</html>
